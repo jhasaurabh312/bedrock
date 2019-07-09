@@ -5,8 +5,6 @@
 $font-path: '/media/fonts';
 $image-path: '/media/protocol/img';
 
-@import '../libs/system-font';
-
 @import '../../protocol/css/includes/lib';
 @import '../../protocol/css/components/feature-card';
 @import '../../protocol/css/components/hero';
@@ -27,16 +25,6 @@ $fx-yellow: #FFE55B;
 
 // not yet recognized as valid by style lint, so we abstract it
 $mq-reduced-motion: 'screen and (prefers-reduced-motion: reduce)';
-
-.mzp-t-firefox {
-    &,
-    h1,
-    h2,
-    h3,
-    h4 {
-        font-family: system-ui, sans-serif;
-    }
-}
 
 main .mzp-l-content {
     max-width: 400px;
@@ -224,16 +212,12 @@ main .mzp-l-content {
 
     @media #{$mq-lg} and #{$mq-tall} {
         &.mzp-c-hero.mzp-has-image {
-            @include bidi((
-                (background-image, url('/media/img/firefox/mobile/protocol/hero.jpg'), url('/media/img/firefox/mobile/protocol/hero-rtl.jpg')),
-            ));
+            background-image: url('/media/img/firefox/mobile/focus-lightweight-high-res.png');
             height: 60vh;
             max-height: 672px;
 
-            @media all #{$mq-high-res} {
-                @include bidi((
-                    (background-image, url('/media/img/firefox/mobile/protocol/hero-high-res-rtl.jpg'), url('/media/img/firefox/mobile/protocol/hero-small-high-res-rtl.jpg')),
-                ));
+            .mobile-ios & {
+                background-image: url('/media/img/firefox/mobile/phone-firefox-high-res.png');
             }
         }
     }

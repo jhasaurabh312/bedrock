@@ -9,7 +9,7 @@ $image-path: '/media/protocol/img';
 
 .moz-sub-nav {
     @include clearfix();
-    @include open-sans;
+    @include font-base;
     background: #fff;
     display: none; // hidden for mobile
     min-height: 52px;
@@ -183,7 +183,7 @@ $image-path: '/media/protocol/img';
 }
 
 @include theme-color('firefox', $color-orange-70);
-@include theme-color('internet-health', $color-teal-70);
+@include theme-color('internet-health', $color-green-70);
 @include theme-color('technology', $color-purple-70);
 
 

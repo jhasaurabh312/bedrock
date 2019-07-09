@@ -992,14 +992,3 @@ def election_with_cards(request):
         ctx['page_content_cards'] = get_page_content_cards('election-en', 'en-US')
 
     return l10n_utils.render(request, template_name, ctx)
-
-
-def firefox_mobile(request):
-    locale = l10n_utils.get_locale(request)
-
-    if locale.startswith('en-'):
-        template_name = 'firefox/mobile-en.html'
-    else:
-        template_name = 'firefox/mobile.html'
-
-    return l10n_utils.render(request, template_name)
