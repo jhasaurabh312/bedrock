@@ -1,0 +1,56 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+$font-path: '/media/fonts';
+$image-path: '/media/protocol/img';
+
+@import '../../protocol/css/protocol.scss';
+@import '../../protocol/css/components/article';
+@import '../../protocol/css/components/button';
+@import '../../protocol/css/components/call-out';
+@import '../../protocol/css/components/card';
+@import '../../protocol/css/components/feature-card';
+@import '../../protocol/css/components/hero';
+@import '../../protocol/css/templates/card-layout';
+
+// Bedrock specific component tweaks.
+@import 'components/navigation';
+@import 'components/download-button';
+
+
+.mzp-c-navigation-logo a {
+    background-image: url('/media/img/logos/firefox/logo-master-wordmark-dark.svg');
+    height: 36px;
+}
+
+.mzp-c-card {
+    position: relative;
+}
+.mzp-c-card {
+    padding-top: 2rem;
+}
+
+.mzp-c-card.mzp-c-card-large {
+    padding-top: 3rem;
+}
+
+.mzp-c-card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.master-logo {
+    background-image: url('/media/img/logos/firefox/logo-master-wordmark-dark.svg');
+    background-repeat: no-repeat;
+    display: block;
+    height: 80px;
+    width: 92px;
+    margin-bottom: $spacing-lg;
+
+    .mzp-c-hero & {
+        margin: 0 auto $spacing-lg auto;
+    }
+}
+

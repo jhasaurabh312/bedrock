@@ -1,0 +1,77 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% from "macros.html" import google_play_button with context %}
+{% from "macros-protocol.html" import call_out, call_out_compact, hero, feature_card with context %}
+
+{% extends "firefox/base-protocol.html" %}
+
+{% block page_title %}News{% endblock %}
+
+{% block content %}
+<section class="mzp-c-hero mzp-t-firefox">
+    <div class="mzp-l-content">
+      <div class="mzp-c-hero-body">
+        <span class="master-logo"></span>
+        <h1 class="mzp-c-hero-title">Firefox News</h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="mzp-l-content">
+      <div class="mzp-l-card-quarter">
+
+          <section class="mzp-c-card mzp-has-aspect-16-9">
+              <a class="mzp-c-card-block-link" href="#">
+                <div class="mzp-c-card-media-wrapper">
+                  <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+                </div>
+                <div class="mzp-c-card-content">
+                  <p class="mzp-c-card-desc">Latest Firefox Release Available today for iOS and Desktop</p>
+                  <a class="mzp-c-cta-link" href="#">Read more</a>
+                </div>
+              </a>
+            </section>
+          <section class="mzp-c-card mzp-has-aspect-16-9">
+              <a class="mzp-c-card-block-link" href="#">
+                <div class="mzp-c-card-media-wrapper">
+                  <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+                </div>
+                <div class="mzp-c-card-content">
+                  <p class="mzp-c-card-desc">Mozilla joins brief for protection of LGBTQ employees from discrimination</p>
+                  <a class="mzp-c-cta-link" href="#">Read more</a>
+                </div>
+              </a>
+            </section>
+            <section class="mzp-c-card mzp-has-aspect-16-9">
+                <a class="mzp-c-card-block-link" href="#">
+                  <div class="mzp-c-card-media-wrapper">
+                    <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+                  </div>
+                  <div class="mzp-c-card-content">
+                    <p class="mzp-c-card-desc">The web the world needs can be ours again, if we want it</p>
+                    <a class="mzp-c-cta-link" href="#">Read more</a>
+                  </div>
+                </a>
+              </section>
+              <section class="mzp-c-card mzp-has-aspect-16-9">
+                  <a class="mzp-c-card-block-link" href="#">
+                    <div class="mzp-c-card-media-wrapper">
+                      <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+                    </div>
+                    <div class="mzp-c-card-content">
+                      <p class="mzp-c-card-desc">IRL Podcast: Democracy and the Internet</p>
+                      <a class="mzp-c-cta-link" href="#">Read more</a>
+                    </div>
+                  </a>
+                </section>
+
+
+      </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('fights-for-you') }}
+{% endblock %}
