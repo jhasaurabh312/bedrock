@@ -1,0 +1,25 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% add_lang_files "firefox/sendto" %}
+
+{% extends "firefox/base-protocol.html" %}
+
+{% block page_title %}Send | {{ _('Firefox') }}{% endblock %}
+
+{% block content %}
+
+  <main role="main">
+    <section class="mzp-c-hero mzp-t-firefox">
+      <div class="mzp-l-content">
+        <div class="mzp-c-hero-body">
+            <img src="/media/img/logos/firefox/logo-send.svg" class="mzp-c-menu-item-icon" alt="" width="80" height="80">
+          <h1 class="mzp-c-hero-title">Firefox Send</h1>
+          <div class="mzp-c-hero-desc">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}
