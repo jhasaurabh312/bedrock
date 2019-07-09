@@ -44,7 +44,9 @@
 {% block body_id %}{% endblock %}
 {% block body_class %}{% endblock %}
 
-{% block site_header %}{% endblock %}
+{% block site_header %}
+  {% include 'includes/protocol/navigation/firefox.html' %}
+{% endblock %}
 
 {% block content %}
 {# Bug 1438302 Avoid duplicate content for en-CA and en-GB pages. #}

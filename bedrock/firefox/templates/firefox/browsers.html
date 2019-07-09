@@ -1,0 +1,103 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% from "macros.html" import google_play_button with context %}
+{% from "macros-protocol.html" import call_out, call_out_compact, hero, feature_card with context %}
+
+{% extends "firefox/base-protocol.html" %}
+
+{% block page_title %}Browsers{% endblock %}
+
+{% block content %}
+<section class="mzp-c-hero mzp-t-firefox mzp-t-product-firefox">
+    <div class="mzp-l-content">
+      <div class="mzp-c-hero-body">
+        <h1 class="mzp-c-hero-title">Firefox Browsers</h1>
+
+        <div class="mzp-c-hero-desc">
+          <p class="mzp-c-hero-tagline">Fast, Private, and On Your Side</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mzp-l-content">
+      <div class="mzp-l-card-hero">
+
+
+          <section class="mzp-c-card mzp-c-card-large mzp-has-aspect-16-9">
+            <a class="mzp-c-card-block-link" href="#">
+              <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+                <h2 class="mzp-c-card-title">Firefox Desktop</h2>
+                <p class="mzp-c-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor mauris eu enim egestas, in fermentum libero ultrices. Quisque id tincidunt neque.</p>
+
+              </div>
+            </a>
+          </section>
+
+
+
+          <section class="mzp-c-card mzp-has-aspect-1-1">
+            <a class="mzp-c-card-block-link" href="#">
+              <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+                <h2 class="mzp-c-card-title">Firefox Mobile for Android</h2>
+                <p class="mzp-c-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor mauris eu enim egestas, in fermentum libero ultrices. Quisque id tincidunt neque.</p>
+              </div>
+            </a>
+          </section>
+
+
+          <section class="mzp-c-card mzp-has-aspect-3-2">
+            <a class="mzp-c-card-block-link" href="#">
+              <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+                <h2 class="mzp-c-card-title">Firefox Mobile for iOS</h2>
+                <p class="mzp-c-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor mauris eu enim egestas, in fermentum libero ultrices. Quisque id tincidunt neque.</p>
+              </div>
+            </a>
+          </section>
+
+
+          <section class="mzp-c-card mzp-has-aspect-3-2">
+            <a class="mzp-c-card-block-link" href="#">
+              <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+                <h2 class="mzp-c-card-title">Firefox Enterprise</h2>
+                <p class="mzp-c-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor mauris eu enim egestas, in fermentum libero ultrices. Quisque id tincidunt neque.</p>
+
+              </div>
+            </a>
+          </section>
+
+
+          <section class="mzp-c-card mzp-has-aspect-3-2">
+            <a class="mzp-c-card-block-link" href="#">
+              <div class="mzp-c-card-media-wrapper">
+                <img class="mzp-c-card-image" src="../static/img/card/card-image.png" alt="">
+              </div>
+              <div class="mzp-c-card-content">
+                <h2 class="mzp-c-card-title">Firefox Reality</h2>
+                <p class="mzp-c-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor mauris eu enim egestas, in fermentum libero ultrices. Quisque id tincidunt neque.</p>
+
+              </div>
+            </a>
+          </section>
+
+        </div>
+      </div>
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('fights-for-you') }}
+{% endblock %}

@@ -716,6 +716,12 @@
     },
     {
       "files": [
+        "css/protocol/protocol-all.scss"
+      ],
+      "name": "protocol-all"
+    },
+    {
+      "files": [
         "css/firefox/features/common.scss"
       ],
       "name": "firefox-features-hub-common"
