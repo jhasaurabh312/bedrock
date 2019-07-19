@@ -1,0 +1,97 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/. -#}
+
+{% from "macros.html" import monitor_button with context %}
+
+{% add_lang_files "firefox/whatsnew_69" %}
+
+{% extends "firefox/base-protocol.html" %}
+
+{# L10n: HTML title. Firefox Monitor should remain in English as a product name. #}
+{% block page_title %}{{ _('Firefox Monitor — see if you’ve been in another company’s data breach') }}{% endblock %}
+{# L10n: HTML description. Firefox Monitor should remain in English as a product name. #}
+{% block page_desc %}{{ _('Use Firefox Monitor to see if your info was compromised in another company’s data breach — and get automatically signed up for future alerts.') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('firefox_whatsnew_67.0.5') }}
+{% endblock %}
+
+{% block body_class %}state-fxa-default{% endblock %}
+
+{% block site_header %}{% endblock %}
+
+{% block content %}
+<main class="mzp-t-firefox">
+  <header class="c-page-header">
+    <div class="mzp-l-content c-page-header-inner">
+      {{ high_res_img('firefox/whatsnew_67/logo.png', {'alt': 'Firefox', 'width': '147', 'height': '55', 'class': 'c-page-header-logo-fx'}) }}
+      {# L10n: Notification banner #}
+      <h1 class="c-page-header-up-to-date"><span>{{ _('Congrats! You’re using the latest version of Firefox.') }}</span></h1>
+    </div>
+  </header>
+
+  <section class="mzp-l-content">
+    <div class="card">
+      <div class="show-fxa-default show-fxa-supported-signed-out">
+        {# L10n: Page headline for users without an account. Firefox Monitor should remain in English as a product name. #}
+        <h2>{{ _('Have you checked out Firefox Monitor?') }}</h2>
+        <p>{{ _('Sign up to see if your info was compromised in another company’s data breach, and automatically get alerts when your info might be at risk.') }}</p>
+
+        {# L10n: Monitor refers to the Firefox Monitor product. It should remain in English. #}
+        {{ monitor_button(
+          entrypoint='mozilla.org-whatsnew69',
+          utm_source='whatsnew69',
+          utm_campaign='whatsnew69',
+          button_text=_('Sign Up for Monitor')
+        ) }}
+      </div>
+
+      <div class="show-fxa-supported-signed-in">
+        {# L10n: Page headline for account holders. Firefox Monitor should remain in English as a product name. #}
+        <h2>{{ _('Have you checked out Firefox Monitor? It’s included with your Firefox account.') }}</h2>
+        <p>{{ _('Use Firefox Monitor to see if your info was compromised in another company’s data breach — and get automatically signed up for future alerts.') }}</p>
+
+        {{ monitor_button(
+          entrypoint='mozilla.org-whatsnew69',
+          utm_source='whatsnew69',
+          utm_campaign='whatsnew69',
+          button_text=_('Sign In')
+        ) }}
+      </div>
+    </div>
+  </section>
+
+  <section class="mzp-l-content c-benefits">
+    <div class="benefits-list">
+
+        <div class="benefit-content">
+          <h3>{{ _('Your Firefox Browser now automatically blocks online snoopers') }}</h3>
+          <p>{{ _('Now it’s harder than ever for spying companies to track you online. That’s because Enhanced Tracking Protection — a feature that blocks known tracking cookies — is on by default in your updated browser.') }}</p>
+        </div>
+
+        <hr>
+
+        <div class="benefit-content">
+          <h3>{{ _('Put quality content in your Pocket') }}</h3>
+          <p>{{ _('Discover the web’s best content, and absorb it anytime — even offline — on any device. Pocket’s listen feature will even read any article aloud to you. Get it all from the Firefox toolbar or the Pocket app.') }}</p>
+          <p><a href="https://getpocket.com">{{ _('Get the Pocket App') }}</a></p>
+        </div>
+
+    </div>
+  </section>
+
+  <aside class="mzp-l-content l-content-narrow">
+    <p>
+    {% trans notes=url('firefox.notes') %}
+      Read the <a href="{{ notes }}">Release Notes</a> to know more about what’s new in your Firefox Browser.
+    {% endtrans %}
+    </p>
+  </aside>
+
+</main>
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('firefox_whatsnew_67.0.5') }}
+{% endblock %}
