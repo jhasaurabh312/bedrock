@@ -107,13 +107,6 @@
     },
     {
       "files": [
-        "css/firefox/developer/developer.scss",
-        "css/firefox/developer/firstrun.scss"
-      ],
-      "name": "firefox_developer_quantum_firstrun"
-    },
-    {
-      "files": [
         "css/mozorg/partnerships-distribution.scss"
       ],
       "name": "partnerships-distribution"
@@ -456,13 +449,6 @@
         "css/mozorg/credits.scss"
       ],
       "name": "credits"
-    },
-    {
-      "files": [
-        "css/firefox/developer/developer.scss",
-        "css/firefox/developer/whatsnew.scss"
-      ],
-      "name": "firefox_developer_quantum_whatsnew"
     },
     {
       "files": [
@@ -1371,9 +1357,8 @@
     },
     {
       "files": [
-        "js/libs/jquery.waypoints.min.js",
-        "js/libs/jquery.waypoints-sticky.min.js",
-        "js/hubs/sub-nav.js"
+        "protocol/js/protocol-newsletter.js",
+        "js/newsletter/form-protocol.js"
       ],
       "name": "firefox_developer"
     },
