@@ -4,8 +4,8 @@ DEFAULT_TIMEOUT = 300
 
 
 class SimpleDictCache(LocMemCache):
-    """A local memory cache that doesn't pickle values.
-
+    """
+    A local memory cache that doesn't pickle values.
     Only for use with simple immutable data structures that can be
     inserted into a dict.
     """
